@@ -1,0 +1,33 @@
+<style>
+    label {
+        cursor: pointer;
+        padding: 5px 5px;
+        margin-right: 10px;
+    }
+
+    #submit-btn {
+        padding: 10px 15px;
+        background-color: #ccc;
+        border-radius: 5px;
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    input[type="radio"]:checked#two ~ #submit-btn {
+        background-color: gray;
+        cursor: pointer;
+        pointer-events: all;
+        opacity: 1;
+    }
+</style>
+<form action="submit">
+    <div style="text-align: center; padding-top: 10%;">
+        <input id="one" type="radio" value="one"/>
+        <label for="one">Első</label>
+        <input id="two" type="radio" value="two" required/>
+        <label for="two">Második</label>
+        <input id="three" type="radio" value="three"/>
+        <label for="three">Harmadik</label>
+        <button id="submit-btn" type="submit">Submit</button>
+    </div>
+    </form>
